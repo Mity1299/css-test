@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        div{
+            margin-bottom: 20px;
+        }
+        .tall-box,
+        .short-box   {
+            display: inline-block;
+            /* size, color, etc. */
+            vertical-align: text-bottom;
+            width: 21px;
+
+         }
+
+        .tall-box{
+            height: 80px;
+            background-color: blue;
+        }
+
+        .short-box{
+            height: 21px;
+            background-color: palevioletred;
+        }
+
+        .text-bottom { vertical-align: text-bottom; }
+        .text-top    { vertical-align: text-top; }
+    </style>
+</head>
+<body>
+<!-- left mark-up -->
+<!--基线下移，导致矮盒子往下走-->
+<div>
+    <span class="tall-box text-bottom"></span>
+    <span class="short-box"></span>
+</div>
+
+<!-- right mark-up -->
+<!--基线上移，导致矮盒子往上走-->
+<div>
+    <span class="tall-box text-top"></span>
+    <span class="short-box"></span>
+</div>
+
+</body>
+</html>

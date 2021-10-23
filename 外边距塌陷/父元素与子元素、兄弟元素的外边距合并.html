@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>$Title$</title>
+<!--
+这个测试可以直观的看到：
+1. 父元素和第一个子元素的上外边距合并
+2. 父元素和最后一个子元素的下外边距合并
+3. 两个相邻兄弟元素的外边距合并
+-->
+    <style>
+        .container{
+            margin-top: 40px;
+            margin-bottom: 40px;
+
+            background-color: lightgreen;
+            font-size: 10px;
+            width: 20em;
+        }
+
+        .item{
+
+            background-color: lightcoral;
+            width: 100%;
+            height: 10em;
+        }
+
+        .item:nth-child(1){
+            margin-top:10px;
+            margin-bottom:10px;
+        }
+
+        .item:nth-child(2){
+            margin-top:20px;
+            margin-bottom:20px;
+        }
+
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+</div>
+<span style="background-color: orange">这是个尾部，用来直观测试</span>
+</body>
+</html>

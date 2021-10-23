@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    缺点：由于多列布局是优先让每列高度相等，所以不是从左到右排序，而是从上到下排序 -->
+    <style>
+        .container{
+            column-count: 3;
+            column-gap: 5px;
+        }
+        .container h4{
+            column-span: all;
+            text-align: center;
+        }
+        div>div{
+            background-color: dodgerblue;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h4>这是一个标题</h4>
+    <div style="height: 100px">1</div>
+    <div style="height: 200px">2</div>
+    <div style="height: 300px">3</div>
+    <div style="height: 400px">4</div>
+    <div style="height: 200px">5</div>
+    <div style="height: 100px">6</div>
+</div>
+</body>
+</html>

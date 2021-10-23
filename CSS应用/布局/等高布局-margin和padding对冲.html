@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="等高布局.css" rel="stylesheet">
+<!--   缺陷：当列的高度很大，超出对冲设置的值就会失效；而且如果列有背景或者边框，就会看不到效果-->
+    <style>
+        .Article {
+            overflow: hidden;
+        }
+
+        .Article>li {
+            float: left;
+            background: #4577dc;
+            width: 200px;
+            color: #fff;
+        }
+
+        .Article>li>p {
+            padding: 10px;
+        }
+
+
+        .Article>li {
+            padding-bottom: 9999px;
+            margin: 0 10px -9999px 0;
+        }
+
+    </style>
+</head>
+<body>
+<ul class="Article">
+    <li class="js-article-item">
+        <p>
+            一家将客户利益置于首位的经纪商，
+            为客户提供专业的交易工具一家将客户利益置于首位的经纪商，
+            为客户提供专业的交易工具一家将客户利益置于首位的经纪商，
+            为客户提供专业的交易工具一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
+        </p>
+    </li>
+    <li class="js-article-item">
+        <p>一家将客户利益置于首位的经纪商，为客户提供专业的交易工具
+            一家将客户利益置于首位的经纪商，为客户提供专业的交易工具</p>
+    </li>
+    <li class="js-article-item">
+        <p>一家将客户利益置于首位的经纪商</p>
+    </li>
+</ul>
+</body>
+</html>

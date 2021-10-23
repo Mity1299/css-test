@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    适合不规则排版，关键是用z-index改变层叠顺序-->
+    <style>
+        section{
+            width: 80px;
+            height: 80px;
+            display: inline-block;
+            position: absolute;
+        }
+
+        section:nth-child(1){
+            background-color: red;
+            left: 10px;
+            top: 10px;
+        }
+        section:nth-child(2){
+            background-color: blue;
+            right: 20px;
+            bottom: 10px;
+        }
+        section:nth-child(3){
+            background-color: yellow;
+            right: 40px;
+            top: 20px;
+        }
+        section:nth-child(4){
+            background-color: orangered;
+            left: -10px;
+            bottom: -10px;
+        }
+    </style>
+</head>
+<body>
+<!--相对位置-->
+<div style="position: relative;width: 200px;height: 200px">
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+</div>
+</body>
+</html>

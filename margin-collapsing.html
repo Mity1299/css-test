@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>外边框塌陷</title>
+    <style>
+        body{
+            font-size: 10px;
+        }
+
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .parent{
+            width: 30em;
+            height: 20em;
+
+            background-color: deepskyblue;
+        }
+
+        .child{
+            width: 100%;
+            height: 10em;
+
+            background-color: hotpink;
+        }
+
+    </style>
+</head>
+<body>
+<div class="container">
+    <section>
+        <header>父元素和第一个子元素，margin-top塌陷</header>
+        <div class="parent" style="margin-top: 20px">
+            <div class="child" style="margin-top: 10px"></div>
+        </div>
+    </section>
+
+    <section>
+        <header>父元素和第一个子元素</header>
+        <div class="parent" style="margin-top: 20px">
+            <div class="child" style="margin-top: 10px"></div>
+        </div>
+    </section>
+
+    <section>
+        <header>父元素和第一个子元素</header>
+        <div class="parent" style="margin-top: 20px">
+            <div class="child" style="margin-top: 10px"></div>
+        </div>
+    </section>
+
+    <section>
+        <header>父元素和第一个子元素</header>
+        <div class="parent" style="margin-top: 20px">
+            <div class="child" style="margin-top: 10px"></div>
+        </div>
+    </section>
+
+</div>
+
+</body>
+</html>

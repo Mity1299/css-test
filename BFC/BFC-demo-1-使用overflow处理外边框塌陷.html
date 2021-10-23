@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BFC</title>
+    <!--    通过overflow:hidden去创建BFC，避免避免red-inner和red-outer的margin-top合并-->
+    <style>
+        .blue, .red-outer {
+            height: 50px;
+            margin: 10px 0;
+        }
+
+        .blue {
+            background: blue;
+        }
+
+        .red-outer {
+            overflow: hidden;/*这个属性的目的是创建一个BFC，这样可以避免red-inner的margin-top合并*/
+            background: red;
+        }
+
+        .yellow-inner{
+            background-color: yellow;
+        }
+
+    </style>
+</head>
+<body>
+<h1></h1>
+<div class="blue"></div>
+<div class="red-outer">
+    <div class="yellow-inner">red inner</div>
+</div>
+
+</body>
+</html>

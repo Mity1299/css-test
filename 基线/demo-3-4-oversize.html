@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        body{
+            display: flex;
+            justify-content: space-between;
+            width: 500px;
+        }
+        div{
+            margin-bottom: 20px;
+        }
+        .tall-box,
+        .short-box   {
+            display: inline-block;
+            /* size, color, etc. */
+            vertical-align: text-bottom;
+            width: 21px;
+        }
+
+        .tall-box{
+            height: 80px;
+            background-color: blue;
+        }
+
+        .short-box{
+            height: 21px;
+            background-color: palevioletred;
+        }
+
+        .middle      { vertical-align: middle; }
+        .text-top    { vertical-align: text-top; }
+        .text-bottom { vertical-align: text-bottom; }
+        .text-100up  { vertical-align: 100%; }
+    </style>
+
+</head>
+<body>
+<!-- left mark-up -->
+<div>
+<span class="tall-box text-bottom"></span>
+<span class="tall-box text-top"></span>
+</div>
+
+<!-- middle mark-up -->
+<div>
+<span class="tall-box text-bottom"></span>
+<span class="tall-box text-top"></span>
+<span class="tall-box middle"></span>
+</div>
+
+<!-- right mark-up -->
+<div>
+<span class="tall-box text-bottom"></span>
+<span class="tall-box text-top"></span>
+<span class="tall-box text-100up"></span>
+</div>
+
+
+</body>
+</html>

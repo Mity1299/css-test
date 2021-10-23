@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body > *{
+            height: 200px;
+        }
+        .top {background-color: #4577dc;height: 200px;}
+        .left{background-color: lightsalmon;height: 200px;}
+        .right{background-color: lightseagreen;height: 200px;}
+
+        .top{
+            width: 100%;
+        }
+
+        .left{
+            width: 50%;
+            display: inline-block;
+        }
+
+        .right{
+            width: 50%;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+<div class="top"></div>
+<!--第一种方式，需要把中间的换行去掉-->
+<!--<div class="left"></div><div class="right"></div>-->
+<!--第二种方式，使用float-->
+<!--<div class="left" style="float: left"></div>-->
+<!--<div class="right" style="float: left"></div>-->
+<!--第三种方式，使用flex-->
+<div style="display: flex">
+    <div class="left"></div>
+    <div class="right"></div>
+</div>
+
+</body>
+</html>

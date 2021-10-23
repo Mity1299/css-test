@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>inline-block</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<div>
+<!--    出现的问题：包含空白符-->
+    <div>
+        <span class="d-inline-block">行内块元素</span>
+        <span class="d-inline-block">行内块元素</span>
+        <span class="d-inline-block">行内块元素</span>
+    </div>
+
+    <!--    写在同一行就可以去掉空白符了居然-->
+    <span class="d-inline-block">行内块元素</span><span class="d-inline-block">行内块元素</span><span class="d-inline-block">行内块元素</span>
+</div>
+</body>
+</html>

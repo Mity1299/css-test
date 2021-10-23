@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .container{
+            width: 500px;
+
+            background-color: lightgray;
+            margin-bottom: 20px;
+        }
+        .half { display: inline-block;
+            width: 50%;
+            background-color: hotpink;
+        }
+    </style>
+
+</head>
+<body>
+<!-- left mark-up -->
+<div class="container">
+<div class="half">50% wide</div>
+<div class="half">50% wide... and in next line</div>
+</div>
+
+<!-- right mark-up -->
+<div class="container">
+<!--    下面两个div之间的空白注释很关键，可以阻止换行
+行内元素间的所有空白会折叠为一个。
+如果我们要通过width: 50%实现并排放两个行内元素，那这个空白就会成为障碍。
+因为一行放不下两个50%再加一个空白，结果就会折行（左）。要删除这个间隙，需要在HTML中通过注释删除空白（右）。-->
+<div class="half">50% wide</div><!--
+--><div class="half">50% wide</div>
+</div>
+
+</body>
+</html>

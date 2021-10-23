@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+<!--    圣杯布局指的是从上到下由页头、内容、页脚组成，内容由左中右三列组成
+    我觉得主要是中间内容区需要实现等高布局和宽度自适应的兼容，不然其实挺简单的吧
+    还需要考虑HTML的语义化
+-->
+    <style>
+        .header{background-color: dodgerblue}
+        .footer{background-color: hotpink}
+        .left{background-color: orangered}
+        .center{background-color: lightseagreen}
+        .right{background-color: mediumpurple}
+        .container{
+            height: 300px;
+        }
+        .header,.footer{
+            height: 100px;
+        }
+        .center,.left,.right{
+            float: left;/*创建BFC*/
+            height: 100%;
+        }
+
+
+        .container{
+            padding: 0 100px 0;
+        }
+        .center{
+            width: 100%;
+        }
+        .left{
+            margin-left: -100%;
+            /*距离右边100px*/
+            right: 100px;
+            width: 100px;
+            position: relative;
+        }
+        .right{
+            margin-right: -100px;
+            width: 100px;
+        }
+
+    </style>
+</head>
+<body>
+<header class="header"></header>
+<div class="container">
+    <section class="center"></section>
+    <section class="left"></section>
+    <section class="right"></section>
+</div>
+<footer class="footer"></footer>
+</body>
+</html>
